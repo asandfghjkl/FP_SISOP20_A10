@@ -6,16 +6,17 @@
 ## table of contents
 - [x] [touch](https://github.com/asandfghjkl/FP_SISOP20_A10#touch)
 - [ ] [mv](https://github.com/asandfghjkl/FP_SISOP20_A10#mv)
-- [ ] [find](https://github.com/asandfghjkl/FP_SISOP20_A10#find)
+- [x] [find (belum rekursif)](https://github.com/asandfghjkl/FP_SISOP20_A10#find)
 - [x] [cmp](https://github.com/asandfghjkl/FP_SISOP20_A10#cmp)
 - [ ] [zip](https://github.com/asandfghjkl/FP_SISOP20_A10#zip)
 
 ## source code 
-* [touch](https://github.com/asandfghjkl/FP_SISOP20_A10/blob/master/touch/touch.c)
-* [cmp](https://github.com/asandfghjkl/FP_SISOP20_A10/blob/master/cmp/cmp.c)
+* [touch.c](https://github.com/asandfghjkl/FP_SISOP20_A10/blob/master/touch/touch.c)
+* [find.c](https://github.com/asandfghjkl/FP_SISOP20_A10/blob/master/find/find.c)
+* [cmp.c](https://github.com/asandfghjkl/FP_SISOP20_A10/blob/master/cmp/cmp.c)
 
 ## touch
-Perintah ini digunakan untuk mengganti timestamp sebuah file ke waktu sekarang apabila file sudah tersedia atau membuat file kosong apabila file belum tersedia. 
+Perintah ini digunakan untuk mengganti timestamp sebuah file ke waktu sekarang apabila file sudah tersedia atau membuat file kosong apabila file belum tersedia. Dapat dijalankan dengan argumen lebih dari 1 nama file sekaligus.
 
 ## mv
 Perintah ini digunakan untuk memindahkan file-file ke folder tujuan.
@@ -32,6 +33,16 @@ Terdapat 2 opsi untuk menjalankannya:
 
 ## find
 Perintah ini digunakan untuk mencari file di directory. Perintah ini bersifat rekursif. 
+Terdapat 2 opsi untuk menjalankannya:
+* -n
+  
+  untuk diikuti nama file. bersifat wajib ada dalam argument.
+  contoh: `find -n namafile` akan mencari file dengan nama file sesuai `namafile`.
+  
+* -d
+
+  untuk diikuti direktori. bersifat opsional, apabila tidak sebagai argumen maka akan mencari di cwd.
+  contoh: `find -n namafile -d /path/to/directory` akan mencari file dengan nama file sesuai `namafile` di `/path/to/directory`.
 
 ## cmp
 Membandingkan 2 file byte per byte.
